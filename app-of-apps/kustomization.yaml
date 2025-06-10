@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: orc4n1hdz-go 
+  janus-idp.io/tekton: orc4n1hdz-go
+  backstage.io/kubernetes-id: orc4n1hdz-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: orc4n1hdz-go
+resources:
+  - ci-tekton.yaml
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
